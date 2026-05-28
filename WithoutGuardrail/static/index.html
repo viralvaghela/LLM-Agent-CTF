@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Support Agent</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar Settings -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h2>Agent Config</h2>
+                <p>Trust Boundary & Tools</p>
+            </div>
+            
+            <div class="settings-group" style="display: none;">
+                <label for="role-select">Access Level</label>
+                <select id="role-select">
+                    <option value="user">User (Limited)</option>
+                    <option value="admin">Admin (Elevated)</option>
+                </select>
+            </div>
+
+            <div class="settings-group">
+                <label for="model-select">LLM Model</label>
+                <select id="model-select">
+                    <option value="llama3.1">Loading models...</option>
+                </select>
+            </div>
+
+            <div class="sidebar-footer" style="margin-top: auto; padding-top: 20px; font-size: 0.75rem; color: #64748b; text-align: center; border-top: 1px solid rgba(255, 255, 255, 0.05);">
+                Designed and developed by Viral Vaghela
+            </div>
+
+        </aside>
+
+        <!-- Main Chat Area -->
+        <main class="chat-container">
+            <header class="chat-header">
+                <div class="status-indicator"></div>
+                <h1>Support Agent OS</h1>
+            </header>
+
+            <div class="chat-history" id="chat-history">
+                <div class="message system">
+                    <div class="message-content">
+                        Initializing Agent Environment...<br>
+                        Type a message to begin.
+                    </div>
+                </div>
+            </div>
+
+            <div class="chat-input-area">
+                <input type="text" id="chat-input" placeholder="Enter your prompt here..." autocomplete="off">
+                <input type="file" id="file-upload" style="display: none;">
+                <label for="file-upload" id="upload-btn" style="cursor: pointer; padding: 10px; background: rgba(255, 255, 255, 0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 10px;">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                        <polyline points="17 8 12 3 7 8"></polyline>
+                        <line x1="12" y1="3" x2="12" y2="15"></line>
+                    </svg>
+                </label>
+                <button id="send-btn">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="22" y1="2" x2="11" y2="13"></line>
+                        <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                    </svg>
+                </button>
+            </div>
+        </main>
+    </div>
+    <script src="/static/script.js"></script>
+</body>
+</html>
