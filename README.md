@@ -1,3 +1,7 @@
+<div align="center">
+  <img src="assets/banner.png" alt="Damn Vulnerable Agentic AI Banner" width="100%">
+</div>
+
 # Damn Vulnerable Agentic AI - OWASP ASI Demonstration
 
 Welcome to the **Damn Vulnerable Agentic AI** repository! This project implements a full-stack, AI-driven Customer Support system designed specifically to demonstrate realistic vulnerabilities mapped to the **OWASP Agentic Security Initiative (ASI) Top 10**. 
